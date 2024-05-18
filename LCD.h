@@ -1,5 +1,5 @@
 //Author: Lieu Thanh Truong
-//LCD 16x2 communicate with Pic16f887
+//LCD 16x2 communicate with Pic18f14k22
 
 #define LCD_RW     RD1_bit
 #define LCD_RS     RD0_bit
@@ -54,7 +54,7 @@ void LCD_Init()
     Delay_ms(2);   // Delay 2ms
 }
 
-// H‡m g?i chu?i k˝ t? t?i m‡n hÏnh LCD
+// H√†m g?i chu?i k√Ω t? t?i m√†n h√¨nh LCD
 void LCD_String(char *str)
 {
     while(*str)
@@ -67,8 +67,8 @@ void LCD_SetCursor(unsigned char row, unsigned char col)
 {
     unsigned char pos;
     if(row == 1)
-        pos = 0x80 + col - 1; // –?a ch? b?t d?u c?a dÚng 1
+        pos = 0x80 + col - 1; // √ê?a ch? b?t d?u c?a d√≤ng 1
     else if(row == 2)
-        pos = 0xC0 + col - 1; // –?a ch? b?t d?u c?a dÚng 2
+        pos = 0xC0 + col - 1; // √ê?a ch? b?t d?u c?a d√≤ng 2
     LCD_Send(CMD,pos);
 }
