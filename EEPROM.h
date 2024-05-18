@@ -1,5 +1,5 @@
 // Author: Lieu Thanh Truong
-//Read and write EEPROM in pic16f887
+//Read and write EEPROM in pic18f14k22
 
 void EEPROM_write(unsigned char address, unsigned char data1);
 unsigned char EEPROM_read(unsigned char address);
